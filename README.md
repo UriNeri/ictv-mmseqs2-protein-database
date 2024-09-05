@@ -1,6 +1,6 @@
 # ictv-mmseqs2-protein-database
 
-This repository contains instructions to generate a MMSeqs2 protein database with ICTV taxonomy. This database was not benchmarked. For taxonomic assignment of viral genomes you can try [geNomad](https://github.com/apcamargo/genomad).
+This repository contains instructions to generate a MMSeqs2 protein database with ICTV taxonomy. This database was not benchmarked. For taxonomic assignment of viral genomes you can try [geNomad](https://github.com/apcamargo/genomad). or whatever.
 
 ## Dependencies:
 
@@ -11,10 +11,11 @@ This repository contains instructions to generate a MMSeqs2 protein database wit
 - [`taxonkit` (version 0.11.1)](https://github.com/shenwei356/taxonkit/releases/tag/v0.11.1)
 - [`taxopy`](https://github.com/apcamargo/taxopy)
 - [`mmseqs2`](https://github.com/soedinglab/MMseqs2)
+- ['polars]
 
 ## Instructions
-
-First, download the latest VMR release from ICTV and convert it to a tabular file:
+See the jupyter notebook - [README.ipynb](README.ipynb)
+<!-- First, download the latest VMR release from ICTV and convert it to a tabular file:
 
 ```bash
 aria2c -x 4 -o ictv.xlsx "https://ictv.global/filebrowser/download/585"
@@ -123,4 +124,4 @@ Finally, to assign taxonomy to viral sequences in an input file (`input.fna`):
 
 ```bash
 mmseqs easy-taxonomy input.fna virus_tax_db/virus_tax_db taxonomy_results tmp -e 1e-5 -s 6 --blacklist "" --tax-lineage 1
-```
+``` -->
